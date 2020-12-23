@@ -1,0 +1,26 @@
+{
+  "galaxyApp": {
+    "lune": {
+      "home": {
+        "title": "Lunes",
+        "createLabel": "Create a new Lune",
+        "createOrEditLabel": "Create or edit a Lune",
+        "notFound": "No Lunes found"
+      },
+      "created": "A new Lune is created with identifier {{ param }}",
+      "updated": "A Lune is updated with identifier {{ param }}",
+      "deleted": "A Lune is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Lune {{ id }}?"
+      },
+      "detail": {
+        "title": "Lune"
+      },
+      "name": "Name",
+      "latitude": "Latitude",
+      "longitude": "Longitude",
+      "taille": "Taille",
+      "planet": "Planet"
+    }
+  }
+}

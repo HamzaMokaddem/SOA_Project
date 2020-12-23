@@ -1,0 +1,48 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="lune">
+            <h2><span jhiTranslate="galaxyApp.lune.detail.title">Lune</span> {{ lune.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="galaxyApp.lune.name">Name</span></dt>
+                <dd>
+                    <span>{{ lune.name }}</span>
+                </dd>
+                <dt><span jhiTranslate="galaxyApp.lune.latitude">Latitude</span></dt>
+                <dd>
+                    <span>{{ lune.latitude }}</span>
+                </dd>
+                <dt><span jhiTranslate="galaxyApp.lune.longitude">Longitude</span></dt>
+                <dd>
+                    <span>{{ lune.longitude }}</span>
+                </dd>
+                <dt><span jhiTranslate="galaxyApp.lune.taille">Taille</span></dt>
+                <dd>
+                    <span>{{ lune.taille }}</span>
+                </dd>
+                <dt><span jhiTranslate="galaxyApp.lune.planet">Planet</span></dt>
+                <dd>
+                    <div *ngIf="lune.planetId">
+                        <a [routerLink]="['/planet', lune.planetId, 'view']">{{ lune.planetName }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/lune', lune.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
